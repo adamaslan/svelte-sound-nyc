@@ -1,7 +1,7 @@
 <svelte:head>
 	<title>Bill Pierce - Sound Mixer</title>
 </svelte:head>
-<h1 class="text-4xl text-center my-8 uppercase">Adam Aslan</h1>
+<h1 class="text-4xl text-center my-8 uppercase">Brett Ainslie</h1>
 
 <img
 	src="https://res.cloudinary.com/adamaslan/image/upload/v1653500034/nycsoundguy/brettainslie_xjkvzy.jpg"

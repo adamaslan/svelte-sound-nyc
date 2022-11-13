@@ -63,7 +63,7 @@
 </div>
 
 <style>
-	html {
+	/* html {
 		background: linear-gradient(to bottom, #4678f3, #64d6ee);
 	}
 
@@ -86,8 +86,8 @@
 		height: 150px;
 		margin: auto;
 		position: relative;
-	}
-
+	} */
+	/* 
 	.option {
 		flex-grow: 1;
 		display: block;
@@ -181,5 +181,5 @@
 		.option__label {
 			transform: scale(1);
 		}
-	}
+	} */
 </style>
