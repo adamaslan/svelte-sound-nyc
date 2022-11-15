@@ -3,11 +3,11 @@
 </svelte:head>
 <h1 class="text-4xl text-center my-8 uppercase">Bill Pierce</h1>
 
-<div class="p-8 max-w-6xl mx-auto flex flex-col justify-center align-middle">
+<div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">
 	<img
 		class=" h-96 w-96 object-center rounded-md "
 		src="https://res.cloudinary.com/adamaslan/image/upload/v1653499978/nycsoundguy/bill_t8tjce.jpg"
-		alt="adam"
+		alt=""
 	/> <br />
 	Bill Pierce is a sound mixer, boom op, <br />and sound designer with years of experience handling
 	audio both on set and in post. Based in New York City, <br /> He is available for jobs in the
