@@ -1,5 +1,8 @@
 <script>
+	import { fade } from 'svelte/transition';
 	import Gif from '../../lib/gif.svelte';
+	let foo = false;
+	let foo1 = false;
 </script>
 
 <svelte:head>
@@ -37,5 +40,36 @@
 		<br />
 		<a href="DrewJoy">Drew Joy </a>
 		<br />
+	</p>
+	<br /> <br />
+	<p>
+		To get our email =>
+		{#if foo}
+			<button in:fade={{ delay: 500 }} out:fade on:click={() => (foo = !foo)}
+				><u>THANKS for clicking</u></button
+			>
+		{:else}
+			<button
+				in:fade={{ delay: 500 }}
+				out:fade
+				on:click={() => (foo = !foo)}
+				on:click={() => alert('nycsoundpeople@gmail.com')}><u>Click Here</u></button
+			>
+		{/if}
+	</p>
+	<p>
+		To get our number =>
+		{#if foo1}
+			<button in:fade={{ delay: 500 }} out:fade on:click={() => (foo1 = !foo1)}
+				><u>THANKS for clicking</u></button
+			>
+		{:else}
+			<button
+				in:fade={{ delay: 500 }}
+				out:fade
+				on:click={() => (foo1 = !foo1)}
+				on:click={() => alert('6176869710')}><u>Click Here</u></button
+			>
+		{/if}
 	</p>
 </div>
