@@ -15,14 +15,11 @@
 
 <div class="flex flex-col text-2xl items-center justify-center px-60 ">
 	<p>
-		Our booking and consulatation services are FREE to all productions seeking one of our sound
-		services.{' '}
-	</p>
-	<Gif />
-	<p>
-		Welcome to NYC Sound Guy, the home of world's only website exclusively dedicated to booking
-		sound professionals for film, television, and web content. <br />NYC Sound Guy makes it easy to
-		work with the best film sound people in NYC.
+		Welcome to NYC Sound Guy, a free booking agency and sound blog. We help you find sound
+		professionals for film, television, and web content. We may even be able to find sound
+		technicians for podcasts or recording live music.<br /> <br />NYC Sound Guy makes it easy to
+		work with the best film sound people in NYC. <br /> <br />Contact us to get a quote to hire a
+		location sound mixer and all the gear necessary for your shoot.
 	</p>
 
 	<br />
@@ -60,6 +57,14 @@
 			>
 		{/if}
 	</p>
+	<br />
+	<p>
+		Our booking and consulatation services are FREE to all productions seeking one of our sound
+		services.{' '}
+	</p>
+	<br />
+	<Gif />
+
 	<!-- <div class="option-row">
 		<input class="option-input" checked id="option-1" type="radio" name="options" />
 		<label class="option" for="option-1">

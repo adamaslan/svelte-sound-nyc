@@ -1,5 +1,7 @@
 <script>
 	import { fade } from 'svelte/transition';
+	let foo = false;
+	let foo1 = false;
 </script>
 
 <svelte:head>
@@ -18,11 +20,34 @@
 		<br />
 	</p>
 	<br /> <br />
-	<button on:click={() => alert('8432843462')} transition:fade>
-		Click <u class="hover:max-w-lg"> here </u> get our number
-	</button>
-	<br />
-	<button class="hover:max-w-lg" on:click={() => alert('nycsoundpeople@gmail.com')} transition:fade>
-		Click <u class="hover:max-w-lg">here </u> to get our email
-	</button>{' '}
+	<p>
+		To get our email =>
+		{#if foo}
+			<button in:fade={{ delay: 500 }} out:fade on:click={() => (foo = !foo)}
+				><u>THANKS for clicking</u></button
+			>
+		{:else}
+			<button
+				in:fade={{ delay: 500 }}
+				out:fade
+				on:click={() => (foo = !foo)}
+				on:click={() => alert('nycsoundpeople@gmail.com')}><u>Click Here</u></button
+			>
+		{/if}
+	</p>
+	<p>
+		To get our number =>
+		{#if foo1}
+			<button in:fade={{ delay: 500 }} out:fade on:click={() => (foo1 = !foo1)}
+				><u>THANKS for clicking</u></button
+			>
+		{:else}
+			<button
+				in:fade={{ delay: 500 }}
+				out:fade
+				on:click={() => (foo1 = !foo1)}
+				on:click={() => alert('6176869710')}><u>Click Here</u></button
+			>
+		{/if}
+	</p>
 </div>
