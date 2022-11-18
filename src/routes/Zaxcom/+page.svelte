@@ -1,19 +1,30 @@
 <script>
-	import { fade } from 'svelte/transition';
-
-	// /**
-	// 	 * @type {(arg0: HTMLButtonElement) => __sveltets_2_SvelteTransitionReturnType}
-	// 	 */
-	//  export let fade
 	let foo = false;
 	let foo1 = false;
+	import { fade } from 'svelte/transition';
+	import Gif from '../../lib/gif.svelte';
 </script>
 
-><svelte:head>
-	<title>Experience</title>
+<svelte:head>
+	<title>Zaxcom</title>
 </svelte:head>
-<h1 class="text-4xl text-center my-8 uppercase">Experience</h1>
+<h1 class="text-4xl text-center my-8 uppercase">Zaxcom</h1>
+
 <div class="flex flex-col text-2xl items-center justify-center px-60 ">
+	<Gif />
+	<br />
+
+	<p>
+		Zaxcom is one of the best brands in location sound. They sell mixers, recorders, transmitters,
+		recievers, ifb, and other cruicial sound gear needed for film shoots on location. They're gear
+		works great in NYC even with all the RF!
+	</p>
+	<br />
+	<p>
+		Zaxcom is known for the Nomad, which both records and mixes audio. The nomad also can transmit a
+		wifi signal to be used to send audio to camera or to be used with ifb.
+	</p>
+	<br /> <br />
 	<p>
 		To get our email =>
 		{#if foo}
@@ -44,15 +55,4 @@
 			>
 		{/if}
 	</p>
-	<br />
-	<p class="text-2xl max-w-2xl">
-		Companies we have worked for include: <br /><br /> Vice <br /> Complex{' '}
-		<br /> Google <br /> Verizon <br /> Time <br /> Conde Nast <br />{' '}
-		Instyle Magazine <br /> Nylon <br /> Livestream <br /> PBS <br />{' '}
-		Netflix <br /> Hulu <br /> Smithsonian <br /> Radical Media <br />{' '}
-		Adult Swim <br /> Lifetime <br /> Discovery Channel
-		<br />
-		<br />
-	</p>
-	<br /> <br />
 </div>

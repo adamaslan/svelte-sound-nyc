@@ -9,24 +9,7 @@
 	<title>Services</title>
 </svelte:head>
 <h1 class="text-4xl text-center my-8 uppercase">Services</h1>
-<div class="p-8 max-w-6xl mx-auto flex flex-col justify-center align-middle">
-	<Gif />
-	<br />
-
-	<p>
-		We specialize in all the services associated with location film sound.
-		<br />
-		<br />
-		Sound Mixing / Recording, Boom Operating, and Sound Utility are the 3 main types of services usually
-		requested. <br />
-		<br />
-		Many of the sound mixers listed on NYC Sound Guy have other sound related services they offer from
-		live event AV support to post sound services. <br />
-		<br /> Contact us at nycsoundpeople@gmail.com with any audio related question you may have. We
-		are happy to offer a free consulation for any sound related inquiries.
-		<br />
-	</p>
-	<br /> <br />
+<div class="flex flex-col text-2xl items-center justify-center px-60 ">
 	<p>
 		To get our email =>
 		{#if foo}
@@ -56,5 +39,25 @@
 				on:click={() => alert('6176869710')}><u>Click Here</u></button
 			>
 		{/if}
+	</p>
+	<br />
+	<p>
+		We specialize in all the services associated with location film sound.
+		<br />
+		<br />
+		Sound Mixing / Recording, Boom Operating, and Sound Utility are the 3 main types of services usually
+		requested. <br />
+		<br />
+		Many of the sound mixers listed on NYC Sound Guy have other sound related services they offer from
+		live event AV support to post sound services. <br />
+		<br /> Contact us at nycsoundpeople@gmail.com with any audio related question you may have. We
+		are happy to offer a free consulation for any sound related inquiries.
+		<br />
+	</p>
+	<br /> <br />
+
+	<p class="text-2xl max-w-2xl">
+		<Gif />
+		<br />
 	</p>
 </div>

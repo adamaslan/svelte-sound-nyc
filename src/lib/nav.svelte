@@ -13,7 +13,11 @@
 		on:click={() => (current = 'about')}
 		href="/about">About</a
 	>
-
+	<a
+		class="mx-4 text-3xl {current === 'blog' ? 'selected' : ''}"
+		on:click={() => (current = 'blog')}
+		href="/blog">Blog</a
+	>
 	<a
 		class="mx-4 text-3xl {current === 'services' ? 'selected' : ''}"
 		on:click={() => (current = 'services')}
@@ -47,7 +51,7 @@
 
 <style>
 	.selected {
-		background-color: #ff3e00;
+		background-color: #deda6a;
 		color: white;
 	}
 </style>

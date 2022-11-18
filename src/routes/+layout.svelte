@@ -4,7 +4,7 @@
 	import { fade } from 'svelte/transition';
 
 	let colors = ['#fff989', '#89d9ff'];
-	let deg = 45;
+	let deg = Math.random;
 	$: degString = `${deg}deg`;
 </script>
 
@@ -20,7 +20,7 @@
 
 <style>
 	.background {
-		background: linear-gradient(90deg, rgb(253, 253, 237), rgb(255, 231, 217));
+		background: linear-gradient(90deg, #acb08c, rgb(211, 233, 255));
 		display: flex;
 	}
 </style>

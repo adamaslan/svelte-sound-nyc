@@ -2,25 +2,28 @@
 	let foo = false;
 	let foo1 = false;
 	import { fade } from 'svelte/transition';
-	import Gif from '../../lib/gif.svelte';
 </script>
 
-<svelte:head>
-	<title>Travel</title>
-</svelte:head>
-<h1 class="text-4xl text-center my-8 uppercase">Travel</h1>
-
-<div class="flex flex-col text-2xl items-center justify-center px-60 ">
+<h1 class="text-4xl text-center my-8 uppercase">NYC Sound Blog</h1>
+<div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">
 	<p>
-		We are able to travel to pretty much any location in the world and have the travel gear
-		necessary to expedite shoots associated with lots of travel.
+		Welcome to our very informative blog on all things including and adjacent to location sound for
+		film, commercials, and TV!
 	</p>
 	<br />
 	<p>
-		Contact us today about any shoot anywhere in the world! We have seasoned sound mixers ready to
-		work in any condition on any place on the planet :)
+		Checkout our article on
+		<a href="/Zaxcom"><u>Zaxcom</u> </a> to find out more on one of the industry's leading brands.
+		<br />
 	</p>
-	<br /> <br />
+	<br />
+	<p>
+		We have a ton of great things to share about our mixers, the gear, the places we go to, and the
+		industry in general!<br />
+		<br />
+		To book one of our mixers and all the sound gear that is needed for the shoot contact us today!
+	</p>
+	<br />
 	<p>
 		To get our email =>
 		{#if foo}
@@ -51,6 +54,4 @@
 			>
 		{/if}
 	</p>
-	<br />
-	<Gif />
 </div>
