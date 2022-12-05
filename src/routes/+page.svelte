@@ -13,7 +13,7 @@
 
 <h1 class="text-4xl text-center my-8 uppercase ">NYC Sound Guy</h1>
 
-<div class="flex flex-col text-2xl items-center justify-center px-60 ">
+<div class="flex flex-col text-2xl items-center justify-center px-3 md:px-60 ">
 	<p>
 		Welcome to NYC Sound Guy, a free booking agency and sound blog. We help you find sound
 		professionals for film, television, and web content. We may even be able to find sound
