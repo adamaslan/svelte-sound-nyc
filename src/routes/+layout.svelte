@@ -9,7 +9,7 @@
 </script>
 
 <div
-	class="p-8 max-w-screen-2xl mx-auto flex flex-col 	--deg: {degString};
+	class="p-2 md:p-8 md:max-w-screen-2xl md:mx-auto flex flex-col 	--deg: {degString};
 		background "
 	transition:fade
 >
@@ -20,7 +20,7 @@
 
 <style>
 	.background {
-		background: linear-gradient(90deg, #acb08c, rgb(211, 233, 255));
+		background: linear-gradient(90deg, #c4f0ff, rgb(140, 186, 255));
 		display: flex;
 	}
 </style>

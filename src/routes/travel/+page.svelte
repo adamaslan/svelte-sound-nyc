@@ -10,7 +10,7 @@
 </svelte:head>
 <h1 class="text-4xl text-center my-8 uppercase">Travel</h1>
 
-<div class="flex flex-col text-2xl items-center justify-center px-60 ">
+<div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">
 	<p>
 		We are able to travel to pretty much any location in the world and have the travel gear
 		necessary to expedite shoots associated with lots of travel.
