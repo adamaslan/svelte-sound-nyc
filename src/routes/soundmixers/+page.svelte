@@ -10,6 +10,7 @@
 </svelte:head>
 
 <h1 class="text-4xl text-center my-8 uppercase">Sound Mixers</h1>
+
 <div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">
 	<p>
 		To get our email =>
