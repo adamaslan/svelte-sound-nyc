@@ -20,7 +20,7 @@
 	const handleMobileIconClick = () => (showMobileMenu = !showMobileMenu);
 
 	// Media match query handler
-	const mediaQueryHandler = (e) => {
+	const mediaQueryHandler = (/** @type {{ matches: any; }} */ e) => {
 		// Reset mobile state
 		if (!e.matches) {
 			showMobileMenu = false;
@@ -43,7 +43,7 @@
 		<ul class={`navbar-list${showMobileMenu ? ' mobile' : ''}`}>
 			{#each navItems as item}
 				<li>
-					<a href={item.href}>{item.label}</a>
+					<a on:click={handleMobileIconClick} href={item.href}>{item.label}</a>
 				</li>
 			{/each}
 		</ul>

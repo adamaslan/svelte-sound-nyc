@@ -9,7 +9,7 @@
 	let foo1 = false;
 </script>
 
-><svelte:head>
+<svelte:head>
 	<title>Experience</title>
 </svelte:head>
 <h1 class="text-4xl text-center my-8 uppercase">Experience</h1>
