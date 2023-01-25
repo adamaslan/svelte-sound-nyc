@@ -1,9 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
-
 	// Show mobile icon and display menu
 	let showMobileMenu = false;
-
 	// List of navigation items
 	const navItems = [
 		{ label: 'NYC SOUND GUY', href: '/' },
@@ -15,10 +13,8 @@
 		{ label: 'Travel', href: '/travel' },
 		{ label: 'Blog', href: 'blog' }
 	];
-
 	// Mobile menu click event handler
 	const handleMobileIconClick = () => (showMobileMenu = !showMobileMenu);
-
 	// Media match query handler
 	const mediaQueryHandler = (/** @type {{ matches: any; }} */ e) => {
 		// Reset mobile state
@@ -26,11 +22,9 @@
 			showMobileMenu = false;
 		}
 	};
-
 	// Attach media query listener on mount hook
 	onMount(() => {
 		const mediaListener = window.matchMedia('(max-width: 767px)');
-
 		mediaListener.addListener(mediaQueryHandler);
 	});
 </script>
@@ -43,7 +37,11 @@
 		<ul class={`navbar-list${showMobileMenu ? ' mobile' : ''}`}>
 			{#each navItems as item}
 				<li>
-					<a on:click={handleMobileIconClick} href={item.href}>{item.label}</a>
+					{#if showMobileMenu}
+						<a on:click={handleMobileIconClick} href={item.href}>{item.label}</a>
+					{:else}
+						<a href={item.href}>{item.label}</a>
+					{/if}
 				</li>
 			{/each}
 		</ul>
@@ -53,7 +51,6 @@
 <!-- <script>
 	let current = '/';
 </script>
-
 <nav class="hidden sm:flex justify-center w-full">
 	<a
 		class="mx-4 md:text-3xl {current === '/' ? 'selected' : ''}"
@@ -75,32 +72,27 @@
 		on:click={() => (current = 'services')}
 		href="/services">Services</a
 	>
-
 	<a
 		class="mx-4 md:text-3xl {current === 'soundmixers' ? 'selected' : ''}"
 		on:click={() => (current = 'soundmixers')}
 		href="/soundmixers">Sound Mixers</a
 	>
-
 	<a
 		class="mx-4 md:text-3xl {current === 'experience' ? 'selected' : ''}"
 		on:click={() => (current = 'experience')}
 		href="/experience">Experience</a
 	>
-
 	<a
 		class="mx-4 md:text-3xl {current === 'gear' ? 'selected' : ''}"
 		on:click={() => (current = 'gear')}
 		href="/gear">Gear</a
 	>
-
 	<a
 		class="mx-4 md:text-3xl {current === 'travel' ? 'selected' : ''}"
 		on:click={() => (current = 'travel')}
 		href="/travel">Travel</a
 	>
 </nav>
-
 <!-- <div class="md:hidden flex items-center">
 	<button class="outline-none mobile-menu-button">
 		<svg
@@ -117,7 +109,6 @@
 		</svg>
 	</button>
 </div>
-
 <div class="hidden mobile-menu">
 	<ul class="">
 		<li class="active">
@@ -156,7 +147,6 @@
 		font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 		height: 45px;
 	}
-
 	.inner {
 		max-width: 980px;
 		padding-left: 20px;
@@ -167,14 +157,12 @@
 		align-items: center;
 		height: 100%;
 	}
-
 	.mobile-icon {
 		width: 25px;
 		height: 14px;
 		position: relative;
 		cursor: pointer;
 	}
-
 	.mobile-icon:after,
 	.mobile-icon:before,
 	.middle-line {
@@ -186,29 +174,23 @@
 		transition: all 0.4s;
 		transform-origin: center;
 	}
-
 	.mobile-icon:before,
 	.middle-line {
 		top: 0;
 	}
-
 	.mobile-icon:after,
 	.middle-line {
 		bottom: 0;
 	}
-
 	.mobile-icon:before {
 		width: 66%;
 	}
-
 	.mobile-icon:after {
 		width: 33%;
 	}
-
 	.middle-line {
 		margin: auto;
 	}
-
 	.mobile-icon:hover:before,
 	.mobile-icon:hover:after,
 	.mobile-icon.active:before,
@@ -216,17 +198,14 @@
 	.mobile-icon.active .middle-line {
 		width: 100%;
 	}
-
 	.mobile-icon.active:before,
 	.mobile-icon.active:after {
 		top: 50%;
 		transform: rotate(-45deg);
 	}
-
 	.mobile-icon.active .middle-line {
 		transform: rotate(45deg);
 	}
-
 	.navbar-list {
 		display: none;
 		width: 100%;
@@ -234,7 +213,6 @@
 		margin: 0;
 		padding: 0 40px;
 	}
-
 	.navbar-list.mobile {
 		background-color: rgba(0, 0, 0, 0.8);
 		position: fixed;
@@ -243,12 +221,10 @@
 		bottom: 0;
 		left: 0;
 	}
-
 	.navbar-list li {
 		list-style-type: none;
 		position: relative;
 	}
-
 	.navbar-list li:before {
 		content: '';
 		position: absolute;
@@ -258,7 +234,6 @@
 		height: 1px;
 		background-color: #424245;
 	}
-
 	.navbar-list a {
 		color: #fff;
 		text-decoration: none;
@@ -268,17 +243,14 @@
 		padding: 0 10px;
 		font-size: 13px;
 	}
-
 	@media only screen and (min-width: 767px) {
 		.mobile-icon {
 			display: none;
 		}
-
 		.navbar-list {
 			display: flex;
 			padding: 0;
 		}
-
 		.navbar-list a {
 			display: inline-flex;
 		}
