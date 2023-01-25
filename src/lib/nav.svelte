@@ -1,8 +1,6 @@
 <script>
-	import { onMount } from 'svelte';
-	// Show mobile icon and display menu
 	let showMobileMenu = false;
-	// List of navigation items
+
 	const navItems = [
 		{ label: 'NYC SOUND GUY', href: '/' },
 		{ label: 'About', href: '/about' },
@@ -13,135 +11,32 @@
 		{ label: 'Travel', href: '/travel' },
 		{ label: 'Blog', href: 'blog' }
 	];
-	// Mobile menu click event handler
-	const handleMobileIconClick = () => (showMobileMenu = !showMobileMenu);
-	// Media match query handler
-	const mediaQueryHandler = (/** @type {{ matches: any; }} */ e) => {
-		// Reset mobile state
-		if (!e.matches) {
-			showMobileMenu = false;
-		}
-	};
-	// Attach media query listener on mount hook
-	onMount(() => {
-		const mediaListener = window.matchMedia('(max-width: 767px)');
-		mediaListener.addListener(mediaQueryHandler);
-	});
 </script>
 
 <nav>
 	<div class="inner">
-		<div on:click={handleMobileIconClick} class={`mobile-icon${showMobileMenu ? ' active' : ''}`}>
+		<button
+			class="mobile-icon"
+			on:click={() => (showMobileMenu = !showMobileMenu)}
+			class:showMobileMenu
+		>
 			<div class="middle-line" />
-		</div>
-		<ul class={`navbar-list${showMobileMenu ? ' mobile' : ''}`}>
+		</button>
+
+		<ul class="navbar-list">
 			{#each navItems as item}
 				<li>
-					{#if showMobileMenu}
-						<a on:click={handleMobileIconClick} href={item.href}>{item.label}</a>
-					{:else}
-						<a href={item.href}>{item.label}</a>
-					{/if}
+					<a href={item.href}>{item.label}</a>
 				</li>
 			{/each}
 		</ul>
 	</div>
 </nav>
 
-<!-- <script>
-	let current = '/';
-</script>
-<nav class="hidden sm:flex justify-center w-full">
-	<a
-		class="mx-4 md:text-3xl {current === '/' ? 'selected' : ''}"
-		on:click={() => (current = '/')}
-		href="/">Home</a
-	>
-	<a
-		class="mx-4 md:text-3xl {current === 'about' ? 'selected' : ''}"
-		on:click={() => (current = 'about')}
-		href="/about">About</a
-	>
-	<a
-		class="mx-4 md:text-3xl {current === 'blog' ? 'selected' : ''}"
-		on:click={() => (current = 'blog')}
-		href="/blog">Blog</a
-	>
-	<a
-		class="mx-4 md:text-3xl {current === 'services' ? 'selected' : ''}"
-		on:click={() => (current = 'services')}
-		href="/services">Services</a
-	>
-	<a
-		class="mx-4 md:text-3xl {current === 'soundmixers' ? 'selected' : ''}"
-		on:click={() => (current = 'soundmixers')}
-		href="/soundmixers">Sound Mixers</a
-	>
-	<a
-		class="mx-4 md:text-3xl {current === 'experience' ? 'selected' : ''}"
-		on:click={() => (current = 'experience')}
-		href="/experience">Experience</a
-	>
-	<a
-		class="mx-4 md:text-3xl {current === 'gear' ? 'selected' : ''}"
-		on:click={() => (current = 'gear')}
-		href="/gear">Gear</a
-	>
-	<a
-		class="mx-4 md:text-3xl {current === 'travel' ? 'selected' : ''}"
-		on:click={() => (current = 'travel')}
-		href="/travel">Travel</a
-	>
-</nav>
-<!-- <div class="md:hidden flex items-center">
-	<button class="outline-none mobile-menu-button">
-		<svg
-			class="w-6 h-6 text-gray-500"
-			x-show="!showMenu"
-			fill="none"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			stroke-width="2"
-			viewBox="0 0 24 24"
-			stroke="currentColor"
-		>
-			<path d="M4 6h16M4 12h16M4 18h16" />
-		</svg>
-	</button>
-</div>
-<div class="hidden mobile-menu">
-	<ul class="">
-		<li class="active">
-			<a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold"
-				>Home</a
-			>
-		</li>
-		<li>
-			<a href="#services" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
-				>Services</a
-			>
-		</li>
-		<li>
-			<a href="#about" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
-				>About</a
-			>
-		</li>
-		<li>
-			<a href="#contact" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300"
-				>Contact Us</a
-			>
-		</li>
-	</ul> -->
-
-<!-- </div> -->
-<!-- <style>
-	.selected {
-		background-color: #7dffe9;
-		color: white; -->
-<!-- } -->
-
-<!-- </!-->
 <style>
+	.mobile-icon:where(:not(.showMobileMenu)) + ul {
+		display: none;
+	}
 	nav {
 		background-color: rgba(0, 0, 0, 0.8);
 		font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -158,10 +53,14 @@
 		height: 100%;
 	}
 	.mobile-icon {
+		margin: 0;
 		width: 25px;
 		height: 14px;
 		position: relative;
 		cursor: pointer;
+		background-color: inherit;
+		border: none;
+		text-align: left;
 	}
 	.mobile-icon:after,
 	.mobile-icon:before,
@@ -193,17 +92,17 @@
 	}
 	.mobile-icon:hover:before,
 	.mobile-icon:hover:after,
-	.mobile-icon.active:before,
-	.mobile-icon.active:after,
-	.mobile-icon.active .middle-line {
+	.mobile-icon.showMobileMenu:before,
+	.mobile-icon.showMobileMenu:after,
+	.mobile-icon.showMobileMenu .middle-line {
 		width: 100%;
 	}
-	.mobile-icon.active:before,
-	.mobile-icon.active:after {
+	.mobile-icon.showMobileMenu:before,
+	.mobile-icon.showMobileMenu:after {
 		top: 50%;
 		transform: rotate(-45deg);
 	}
-	.mobile-icon.active .middle-line {
+	.mobile-icon.showMobileMenu .middle-line {
 		transform: rotate(45deg);
 	}
 	.navbar-list {
@@ -213,14 +112,7 @@
 		margin: 0;
 		padding: 0 40px;
 	}
-	.navbar-list.mobile {
-		background-color: rgba(0, 0, 0, 0.8);
-		position: fixed;
-		display: block;
-		height: calc(100% - 45px);
-		bottom: 0;
-		left: 0;
-	}
+
 	.navbar-list li {
 		list-style-type: none;
 		position: relative;
@@ -247,12 +139,22 @@
 		.mobile-icon {
 			display: none;
 		}
-		.navbar-list {
+		.mobile-icon + ul {
 			display: flex;
 			padding: 0;
 		}
 		.navbar-list a {
 			display: inline-flex;
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		.navbar-list {
+			background-color: rgba(0, 0, 0, 0.8);
+			position: fixed;
+			display: block;
+			height: calc(100% - 45px);
+			bottom: 0;
+			left: 0;
 		}
 	}
 </style>
