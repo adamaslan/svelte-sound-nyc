@@ -2,6 +2,8 @@
 	let foo = false;
 	let foo1 = false;
 	import { fade } from 'svelte/transition';
+	import P5a from '../../lib/p5a.svelte';
+
 </script>
 
 <h1 class="text-4xl text-center my-8 uppercase">About NYC Sound Guy</h1>
@@ -47,4 +49,5 @@
 			>
 		{/if}
 	</p>
+	<P5a />
 </div>
