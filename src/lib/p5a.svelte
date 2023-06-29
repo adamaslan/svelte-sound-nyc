@@ -4,7 +4,7 @@ const sketch = (p5) => {
     let t = 0; // time variable
 
     p5.setup = () => {
-        p5.createCanvas(p5.windowWidth, p5.windowHeight); // use windowWidth and windowHeight
+        p5.createCanvas(p5.windowWidth / 2, p5.windowHeight / 2); // use windowWidth and windowHeight
         p5.noStroke();
         p5.fill('#ed225d');
         p5.textSize(12); // set text size
@@ -41,7 +41,7 @@ const sketch = (p5) => {
 
     // add this function to resize the canvas when the window changes
     p5.windowResized = () => {
-        p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+        p5.resizeCanvas(p5.windowWidth /2 , p5.windowHeight /1.4 );
     };
 };
 
