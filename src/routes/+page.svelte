@@ -5,6 +5,7 @@
 	import { fade } from 'svelte/transition';
 	let foo = false;
 	let foo1 = false;
+	import P5a from '../lib/p5a.svelte';
 </script>
 
 <svelte:head>
@@ -63,6 +64,7 @@
 		services.{' '}
 	</p>
 	<br />
+	<P5a />
 	<Gif />
 
 	<!-- <div class="option-row">
