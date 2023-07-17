@@ -26,7 +26,8 @@
 		<ul class="navbar-list">
 			{#each navItems as item}
 				<li>
-					<a href={item.href}>{item.label}</a>
+					<!-- add an event handler to set showMobileMenu to false -->
+					<a href={item.href} on:click={() => (showMobileMenu = false)}>{item.label}</a>
 				</li>
 			{/each}
 		</ul>
