@@ -6,7 +6,7 @@ const sketch = (p5) => {
     p5.setup = () => {
         const container = document.getElementById('p5-container');
     const containerWidth = container.offsetWidth;
-    const containerHeight = container.offsetHeight * 2.5;
+    const containerHeight = container.clientHeight * .75;
 
     p5.createCanvas(containerWidth, containerHeight); // use windowWidth and windowHeight
         p5.noStroke();
@@ -47,7 +47,7 @@ const sketch = (p5) => {
     p5.windowResized = () => {
     const container = document.getElementById('p5-container');
     const containerWidth = container.offsetWidth;
-    const containerHeight = container.offsetHeight;
+    const containerHeight = container.clientHeight;
     p5.resizeCanvas(containerWidth, containerHeight);
   };
 };
