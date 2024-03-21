@@ -10,64 +10,99 @@
 
 <svelte:head>
 	<title>NYC Sound Guy</title>
+	
 </svelte:head>
 
-<h1 class="text-4xl text-center my-8 uppercase ">NYC Sound Guy</h1>
+<h1 class="text-4xl text-center my-8  ">NYC Sound Guy</h1>
+<h2 class="text-3xl text-center my-8  ">	Welcome to NYC's only free booking agency for sound professionals.</h2>
+<div class="container mx-auto px-4 max-w-screen-2xl grid-auto-rows-[200px, 150px, 100px]">
+	<div class="grid md:grid-cols-2 gap-4 aspect-ratio-square ">
+	  <div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col bg-white shadow-lg rounded-lg p-4">
+		<p>
+		 We love to help you find sound
+			professionals for film, television, location sound, podcast, and web content.</p> <p> We may even be able to find sound technicians for podcasts or recording live music.
+		</p>
+	<p>	To hear about our services click <a href="/services"> <u>here</u> </a> </p>
+	</div>
+	<div class="bg-white shadow-lg rounded-lg p-4 aspect-ratio-square"> <img
+		src="https://res.cloudinary.com/adamaslan/image/upload/v1653499897/nycsoundguy/moote_skmxsw.jpg"
+		alt="joe" class="w-full h-auto object-cover" 
+	/> <br /><br />
+	</div>
+	<div class="bg-white shadow-lg rounded-lg p-4 aspect-ratio-square">
+		
+		<img
+		src="https://res.cloudinary.com/adamaslan/image/upload/v1653500034/nycsoundguy/brettainslie_xjkvzy.jpg"
+		alt="joe" class=" h-auto object-cover" 
+	/> <br />
+	</div>
 
-<div class="flex flex-col text-2xl items-center justify-center px-3 md:px-60 ">
-	<p>
-		Welcome to NYC Sound Guy, a free booking agency and sound blog. We help you find sound
-		professionals for film, television, and web content. We may even be able to find sound
-		technicians for podcasts or recording live music.<br /> <br />NYC Sound Guy makes it easy to
-		work with the best film sound people in NYC. <br /> <br />Contact us to get a quote to hire a
-		location sound mixer and all the gear necessary for your shoot.
-	</p>
+	<div class="bg-white shadow-lg rounded-lg p-4 aspect-ratio-square p-8 text-2xl max-w-2xl mx-auto flex flex-col w-full h-auto object-cover">
+		<p>
+			To get our email =>
+			{#if foo}
+				<button in:fade={{ delay: 500 }} out:fade on:click={() => (foo = !foo)}
+					><u>THANKS for clicking</u></button
+				>
+			{:else}
+				<button
+					in:fade={{ delay: 500 }}
+					out:fade
+					on:click={() => (foo = !foo)}
+					on:click={() => alert('nycsoundpeople@gmail.com')}><u>Click Here</u></button
+				>
+			{/if}
+		</p>
+	</div>
 
-	<br />
-	<!-- <button on:click={() => alert('8432843462')} transition:fade>
-		Click <u class="hover:max-w-lg"> here </u> get our number
-	</button> -->
-	<br />
-	<p>
-		To get our email =>
-		{#if foo}
-			<button in:fade={{ delay: 500 }} out:fade on:click={() => (foo = !foo)}
-				><u>THANKS for clicking</u></button
-			>
-		{:else}
-			<button
-				in:fade={{ delay: 500 }}
-				out:fade
-				on:click={() => (foo = !foo)}
-				on:click={() => alert('nycsoundpeople@gmail.com')}><u>Click Here</u></button
-			>
-		{/if}
-	</p>
-	<p>
-		To get our number =>
-		{#if foo1}
-			<button in:fade={{ delay: 500 }} out:fade on:click={() => (foo1 = !foo1)}
-				><u>THANKS for clicking</u></button
-			>
-		{:else}
-			<button
-				in:fade={{ delay: 500 }}
-				out:fade
-				on:click={() => (foo1 = !foo1)}
-				on:click={() => alert('6176869710')}><u>Click Here</u></button
-			>
-		{/if}
-	</p>
-	<br />
-	<p>
-		Our booking and consulatation services are FREE to all productions seeking one of our sound
-		services.{' '}
-	</p>
-	<br />
-	<P5a />
-	<Gif />
+	<div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col bg-white shadow-lg rounded-lg p-4 aspect-ratio-square w-full h-auto object-cover">
+		<p>
+			To get our number =>
+			{#if foo1}
+				<button in:fade={{ delay: 500 }} out:fade on:click={() => (foo1 = !foo1)}
+					><u>THANKS for clicking</u></button
+				>
+			{:else}
+				<button
+					in:fade={{ delay: 500 }}
+					out:fade
+					on:click={() => (foo1 = !foo1)}
+					on:click={() => alert('6176869710')}><u>Click Here</u></button
+				>
+			{/if}
+		</p>
+	</div>
+<div class="bg-white shadow-lg rounded-lg p-4 aspect-ratio-square text-2xl max-w-2xl mx-auto flex flex-col"> <img
+	class=" object-center rounded-md w-full h-auto object-cover"
+	src="https://res.cloudinary.com/adamaslan/image/upload/v1653434876/nycsoundguy/Allistair_zy6ipi.jpg"
+	alt="adam"
+/> <br />
+</div>
+	<div class="bg-white shadow-lg rounded-lg p-4 aspect-ratio-square text-2xl max-w-2xl mx-auto flex flex-col">
+		NYC Sound Guy makes it easy to work with the best film sound people in NYC. 
+		<br /><br /><br />Contact us to get a quote to hire a location sound mixer and all the gear necessary for
+		your shoot.<br /><br /><br />
+		<p>To hear more about our about us click <a href="/about"> <u>here</u> </a></p>
+	</div>
 
-	<!-- <div class="option-row">
+    <div class="bg-white shadow-lg rounded-lg p-4  w-full h-auto object-cover aspect-ratio-square  text-2xl max-w-2xl mx-auto flex flex-col">
+		<Gif />
+		<br /><br />
+		<p>To meet some of our sound professionals click <a href="/soundmixers"> <u>here</u> </a></p>
+	</div>
+	<div class="bg-white shadow-lg rounded-lg p-4 aspect-ratio-square text-2xl max-w-2xl mx-auto flex flex-col">
+		<div id="p5-container"  class="w-full h-auto object-cover" ><P5a />
+			<br /><br />
+			To find out more about some of the companies we've worked with click <a href="/experience"> <u>here</u> </a></div>
+	</div>
+
+
+	<div class="bg-white shadow-lg rounded-lg p-4  w-full h-auto object-cover aspect-ratio-square  text-4xl max-w-2xl mx-auto flex flex-col">To email us simply fill in the form at the bottom of the page. <br /><br /><br /><p>Thanks for visiting us! </p><br /><br /><br /><p> We hope we can be of service :) </p></div>
+</div>
+</div>
+
+
+<!-- <div class="option-row">
 		<input class="option-input" checked id="option-1" type="radio" name="options" />
 		<label class="option" for="option-1">
 			<span class="option__label">
@@ -98,9 +133,8 @@
 			</span>
 		</label>
 	</div> -->
-</div>
 
-<style>
+<!-- 
 	/* html {
 		background: linear-gradient(to bottom, #4678f3, #64d6ee);
 	}
@@ -220,4 +254,22 @@
 			transform: scale(1);
 		}
 	} */
-</style>
+
+</script> -->
+
+<!-- <style>
+	/* Other styles... */
+
+	.grid-container {
+		display: grid;
+		grid-template-columns: 50% 50%; /* Two columns, each taking 50% width */
+		gap: 20px; /* Optional gap between columns */
+		border: 1px solid #ddd;
+	}
+
+	.grid-item {
+		text-align: justify;
+		line-height: 1.5;
+		/* Additional styles for individual columns (optional) */
+	}
+</style> -->

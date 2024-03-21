@@ -1,9 +1,11 @@
 <script> import P5 from 'p5-svelte';
 
-const sketch = (p5) => { let bug; // Declare object let textX; // Declare text x coordinate let textY; // Declare text y coordinate
+p5.setup = () => {
+  const container = p5.parent; // Get a reference to the grid container
+  const containerWidth = container.offsetWidth;
+  const containerHeight = container.offsetHeight;
 
-    p5.setup = () => {
-        p5.createCanvas(p5.windowWidth, p5.windowHeight); // use windowWidth and windowHeight
+  p5.createCanvas(containerWidth, containerHeight);
         p5.background(64);
         // Create object
         bug = new Jitter();
@@ -23,10 +25,11 @@ const sketch = (p5) => { let bug; // Declare object let textX; // Declare text x
         bug.display();
     };
 
-// add this function to resize the canvas when the window changes
-    p5.windowResized = () => {
-        p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
-    };
+
+    container.addEventListener('resize', () => {
+      const containerWidth = container.offsetWidth;
+      const containerHeight = container.offsetHeight;
+      p5.resizeCanvas(containerWidth, containerHeight); // Resize on grid container change
 
 };
 
