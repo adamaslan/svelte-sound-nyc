@@ -15,9 +15,9 @@
 
 <h1 class="text-4xl text-center my-8  ">NYC Sound Guy</h1>
 <h2 class="text-3xl text-center my-8  ">	Welcome to NYC's only free booking agency for sound professionals.</h2>
-<div class="container mx-auto px-4 max-w-screen-2xl grid-auto-rows-[200px, 150px, 100px]">
+<div class="container mx-auto px-4 max-w-screen-2xl ">
 	<div class="grid md:grid-cols-2 gap-4 aspect-ratio-square ">
-	  <div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col bg-white shadow-lg rounded-lg p-4">
+	  <div class=" text-2xl max-w-2xl mx-auto flex flex-col bg-white shadow-lg rounded-lg p-4">
 		<p>
 		 We love to help you find sound
 			professionals for film, television, location sound, podcast, and web content.</p> <p> We may even be able to find sound technicians for podcasts or recording live music.
@@ -26,18 +26,18 @@
 	</div>
 	<div class="bg-white shadow-lg rounded-lg p-4 aspect-ratio-square"> <img
 		src="https://res.cloudinary.com/adamaslan/image/upload/v1653499897/nycsoundguy/moote_skmxsw.jpg"
-		alt="joe" class="w-full h-auto object-cover" 
+		alt="joe" class=" object-center rounded-md w-full h-auto object-cover"
 	/> <br /><br />
 	</div>
 	<div class="bg-white shadow-lg rounded-lg p-4 aspect-ratio-square">
 		
 		<img
 		src="https://res.cloudinary.com/adamaslan/image/upload/v1653500034/nycsoundguy/brettainslie_xjkvzy.jpg"
-		alt="joe" class=" h-auto object-cover" 
+		alt="joe" class=" object-center rounded-md w-full h-auto object-cover"
 	/> <br />
 	</div>
 
-	<div class="bg-white shadow-lg rounded-lg p-4 aspect-ratio-square p-8 text-2xl max-w-2xl mx-auto flex flex-col w-full h-auto object-cover">
+	<div class="bg-white shadow-lg rounded-lg p-4 aspect-ratio-square text-2xl max-w-2xl mx-auto flex flex-col w-full h-auto object-cover">
 		<p>
 			To get our email =>
 			{#if foo}
@@ -55,7 +55,7 @@
 		</p>
 	</div>
 
-	<div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col bg-white shadow-lg rounded-lg p-4 aspect-ratio-square w-full h-auto object-cover">
+	<div class="text-2xl max-w-2xl mx-auto flex flex-col bg-white shadow-lg rounded-lg p-4 aspect-ratio-square w-full h-auto object-cover">
 		<p>
 			To get our number =>
 			{#if foo1}
@@ -91,7 +91,7 @@
 		<p>To meet some of our sound professionals click <a href="/soundmixers"> <u>here</u> </a></p>
 	</div>
 	<div class="bg-white shadow-lg rounded-lg p-4 aspect-ratio-square text-2xl max-w-2xl mx-auto flex flex-col">
-		<div id="p5-container"  class="w-full h-auto object-cover" ><P5a />
+		<div id="p5-container"  class="w-full  object-cover" ><P5a />
 			<br /><br />
 			To find out more about some of the companies we've worked with click <a href="/experience"> <u>here</u> </a></div>
 	</div>
