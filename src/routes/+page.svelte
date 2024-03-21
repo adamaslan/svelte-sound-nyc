@@ -20,8 +20,8 @@
 	  <div class=" text-2xl max-w-2xl mx-auto flex flex-col bg-white shadow-lg rounded-lg p-4">
 		<p>
 		 We love to help you find sound
-			professionals for film, television, location sound, podcast, and web content.</p> <p> We may even be able to find sound technicians for podcasts or recording live music.
-		</p>
+			professionals for film, television, location sound, podcast, and web content.</p><br /> <br /> <p> We may even be able to find sound technicians for podcasts or recording live music.
+		</p><br /><br />
 	<p>	To hear about our services click <a href="/services"> <u>here</u> </a> </p>
 	</div>
 	<div class="bg-white shadow-lg rounded-lg p-4 aspect-ratio-square"> <img
