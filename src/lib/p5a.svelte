@@ -8,8 +8,8 @@ const sketch = (p5) => {
     const containerWidth = container.offsetWidth;
     const containerHeight = container.clientHeight * .75;
 
-    p5.createCanvas(containerWidth, containerHeight); // use windowWidth and windowHeight
-        p5.noStroke();
+    p5.createCanvas(containerWidth, containerHeight);
+        p5.noStroke(); 
         p5.fill('#ed225d');
         p5.textSize(12); // set text size
         p5.textFont('Arial'); // set text font
@@ -50,6 +50,8 @@ const sketch = (p5) => {
     const containerHeight = container.clientHeight;
     p5.resizeCanvas(containerWidth, containerHeight);
   };
+  window.onresize = windowResized;
+//   windowResized(); try if above doesnt help resize issues
 };
 
 </script>
