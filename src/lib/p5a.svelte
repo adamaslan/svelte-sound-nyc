@@ -11,8 +11,8 @@ const sketch = (p5) => {
     p5.createCanvas(containerWidth, containerHeight);
         p5.noStroke(); 
         p5.fill('#ed225d');
-        p5.textSize(12); // set text size
-        p5.textFont('Arial'); // set text font
+        p5.textSize(18); // set text size
+        p5.textFont('courier new'); // set text font
         p5.textAlign(p5.CENTER, p5.CENTER); // set text alignment
     };
 
@@ -35,7 +35,7 @@ const sketch = (p5) => {
                 const myY = y + 175 * p5.sin(2 * p5.PI * t + angle);
 
                 // use width and height to center the text
-                p5.text('NYC   SOUND    GUY', myX - p5.width/3, myY - p5.height/2);
+                p5.text('our    email    is   nycsoundpeople@gmail.com', myX - p5.width/3, myY - p5.height/2);
 
             }
         }
@@ -50,7 +50,7 @@ const sketch = (p5) => {
     const containerHeight = container.clientHeight;
     p5.resizeCanvas(containerWidth, containerHeight);
   };
-  window.onresize = windowResized;
+  window.onresize = p5.windowResized;
 //   windowResized(); try if above doesnt help resize issues
 };
 
