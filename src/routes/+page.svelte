@@ -5,7 +5,8 @@
 	import { fade } from 'svelte/transition';
 	let foo = false;
 	let foo1 = false;
-	import P5a from '../lib/p5a.svelte';
+	// import P5a from '../lib/p5a.svelte';
+	import JotFormEmbed from '../lib/form.svelte';
 </script>
 
 <svelte:head>
@@ -91,7 +92,8 @@
 		<p>To meet some of our sound professionals click <a href="/soundmixers"> <u>here</u> </a></p>
 	</div>
 	<div class="bg-white shadow-lg rounded-lg p-4 aspect-ratio-square text-2xl max-w-2xl mx-auto flex flex-col">
-		<div id="p5-container"  class="w-full  object-cover" ><P5a />
+		<div id="p5-container"  class="w-full  object-cover" >
+			<!-- <P5a /> --> <JotFormEmbed />
 			<br /><br />
 			To find out more about some of the companies we've worked with click <a href="/experience"> <u>here</u> </a></div>
 	</div>

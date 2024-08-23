@@ -2,7 +2,8 @@
 	let foo = false;
 	let foo1 = false;
 	import { fade } from 'svelte/transition';
-	import P5a from '../../lib/p5a.svelte';
+	import JotFormEmbed from '../../lib/form.svelte';
+	// import P5a from '../../lib/p5a.svelte';
 	// import P5b from '../../lib/p5b.svelte';
 
 </script>
@@ -50,6 +51,7 @@
 			>
 		{/if}
 	</p>
-	<P5a />
+	<JotFormEmbed />
+	<!-- <P5a /> -->
 <!--<div  class="p-8 text-2xl max-w-2xl mx-auto" >	<P5b  /> </div>-->
 </div>
