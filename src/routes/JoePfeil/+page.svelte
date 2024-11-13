@@ -15,3 +15,18 @@
 	on Yukon and Arctic expeditions to land survey and provide demarcation for 100 miles of the
 	Alaska/Canada border.
 </div>
+<p>
+	To contact Joe =>
+	{#if foo1}
+		<button in:fade={{ delay: 500 }} out:fade on:click={() => (foo1 = !foo1)}
+			><u>THANKS for clicking</u></button
+		>
+	{:else}
+		<button
+			in:fade={{ delay: 500 }}
+			out:fade
+			on:click={() => (foo1 = !foo1)}
+			on:click={() => alert('joepfeil@gmail.com')}><u>Click Here</u></button
+		>
+	{/if}
+</p>

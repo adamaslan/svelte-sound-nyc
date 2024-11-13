@@ -10,7 +10,7 @@
 		alt="adam"
 	/> <br />
 
-	Allistair Johnson is a a sound mixer, boom op, and sound designer with years of experience
+	Allistair Johnson is a a sound mixer and boom op with years of experience
 	handling audio both on set and in post.
 	<br /> <br />
 	Based in New York City, He is available for jobs in the tristate area as well as travel shoots all
