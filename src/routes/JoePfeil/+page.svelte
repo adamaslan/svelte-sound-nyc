@@ -30,7 +30,7 @@
 	</p>
 </div>
 
-<p class="text-center mt-4">
+<p class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">
 	To contact Joe =>
 	<button
 		in:fade={{ delay: 500 }}
