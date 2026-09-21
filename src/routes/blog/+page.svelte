@@ -4,6 +4,14 @@
 	import { fade } from 'svelte/transition';
 </script>
 
+<svelte:head>
+	<title>NYC Sound Blog | Location Sound Articles</title>
+	<meta
+		name="description"
+		content="Articles from working NYC location sound mixers on gear, including Zaxcom and the Nova 2, and life on set."
+	/>
+</svelte:head>
+
 <h1 class="text-4xl text-center my-8 uppercase">NYC Sound Blog</h1>
 <div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">
 	<p>
@@ -14,6 +22,10 @@
 	<p>
 		Checkout our article on
 		<a href="/Zaxcom"><u>Zaxcom</u> </a> to find out more on one of the industry's leading brands.
+		<br />
+		Or read about the
+		<a href="/blog/nova-2"><u>Zaxcom Nova 2</u></a>, a mixer, recorder and two receivers in one bag
+		that weighs under four pounds.
 		<br />
 	</p>
 	<br />
