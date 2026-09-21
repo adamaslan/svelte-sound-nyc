@@ -4,12 +4,12 @@
 	const navItems = [
 		{ label: 'NYC SOUND GUY', href: '/' },
 		{ label: 'About', href: '/about' },
-		{ label: 'Experience', href: 'experience' },
+		{ label: 'Experience', href: '/experience' },
 		{ label: 'Services', href: '/services' },
-		{ label: 'Sound Mixers', href: 'soundmixers' },
+		{ label: 'Sound Mixers', href: '/soundmixers' },
 		{ label: 'Gear', href: '/gear' },
 		{ label: 'Travel', href: '/travel' },
-		{ label: 'Blog', href: 'blog' }
+		{ label: 'Blog', href: '/blog' }
 	];
 </script>
 
@@ -39,7 +39,8 @@
 		display: none;
 	}
 	nav {
-		background-color: rgba(0, 0, 0, 0.8);
+		background-color: #fff;
+		border-bottom: 1px solid #e5e7eb;
 		font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 		height: 45px;
 	}
@@ -70,7 +71,7 @@
 		position: absolute;
 		width: 100%;
 		height: 2px;
-		background-color: #fff;
+		background-color: #111;
 		transition: all 0.4s;
 		transform-origin: center;
 	}
@@ -125,10 +126,10 @@
 		left: 0;
 		width: 100%;
 		height: 1px;
-		background-color: #424245;
+		background-color: #e5e7eb;
 	}
 	.navbar-list a {
-		color: #fff;
+		color: #111;
 		text-decoration: none;
 		display: flex;
 		height: 45px;
@@ -150,7 +151,7 @@
 	}
 	@media only screen and (max-width: 767px) {
 		.navbar-list {
-			background-color: rgba(0, 0, 0, 0.8);
+			background-color: #fff;
 			position: fixed;
 			display: block;
 			height: calc(100% - 45px);
