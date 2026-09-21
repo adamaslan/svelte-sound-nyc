@@ -1,4 +1,5 @@
 <script>
+	import Seo from '../../lib/Seo.svelte';
 	let foo = false;
 	let foo1 = false;
 	import { fade } from 'svelte/transition';
@@ -7,6 +8,12 @@
 	// import P5b from '../../lib/p5b.svelte';
 
 </script>
+
+<Seo
+	title="About NYC Sound Guy | Free Sound Mixer Booking in NYC"
+	description="NYC Sound Guy connects productions with top New York City sound mixers, confirms availability and rates directly, and books them for free."
+	path="/about"
+/>
 
 <h1 class="text-4xl text-center my-8 uppercase">About NYC Sound Guy</h1>
 <div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">

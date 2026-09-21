@@ -1,18 +1,21 @@
 <script>
+	import Seo from '../../lib/Seo.svelte';
 	import { fade } from 'svelte/transition';
 	let foo1 = false;
 </script>
 
-<svelte:head>
-	<title>Joe Pfeil - Sound Mixer</title>
-</svelte:head>
+<Seo
+	title="Joe Pfeil, NYC Sound Mixer | NYC Sound Guy"
+	description="Joe Pfeil is a location sound engineer with over 10 years of experience in film and TV, owner of State of Sound LLC. Book through NYC Sound Guy."
+	path="/JoePfeil"
+/>
 
-<h1 class="text-4xl text-center my-8 uppercase">Joe Pfeil</h1>
+<h1 class="text-4xl text-center my-8 uppercase">Joe Pfeil, NYC Sound Mixer</h1>
 
 <div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">
 	<img
-		src="https://res.cloudinary.com/adamaslan/image/upload/v1653501229/nycsoundguy/pfeil_u7yges.jpg"
-		alt="Joe Pfeil"
+		src="https://res.cloudinary.com/adamaslan/image/upload/f_auto,q_auto,w_800/v1653501229/nycsoundguy/pfeil_u7yges.jpg"
+		alt="Joe Pfeil, NYC sound mixer"
 		class="mb-4"
 	/>
 	<p>

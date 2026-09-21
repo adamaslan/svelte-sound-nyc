@@ -9,11 +9,12 @@
 		{ label: 'Sound Mixers', href: '/soundmixers' },
 		{ label: 'Gear', href: '/gear' },
 		{ label: 'Travel', href: '/travel' },
-		{ label: 'Blog', href: '/blog' }
+		{ label: 'Blog', href: '/blog' },
+		{ label: 'Get a quote', href: '#contact', cta: true }
 	];
 </script>
 
-<nav>
+<nav class="sticky-nav">
 	<div class="inner">
 		<button
 			class="mobile-icon"
@@ -27,14 +28,31 @@
 			{#each navItems as item}
 				<li>
 					<!-- add an event handler to set showMobileMenu to false -->
-					<a href={item.href} on:click={() => (showMobileMenu = false)}>{item.label}</a>
+					<a href={item.href} class:cta={item.cta} on:click={() => (showMobileMenu = false)}
+						>{item.label}</a
+					>
 				</li>
 			{/each}
 		</ul>
+
+		<a class="mobile-quote" href="#contact">Get a quote</a>
 	</div>
 </nav>
 
 <style>
+	.mobile-quote {
+		margin-left: auto;
+		color: #fff;
+		background: #111;
+		font-size: 13px;
+		padding: 6px 12px;
+		text-decoration: none;
+	}
+	.navbar-list a.cta {
+		background: #111;
+		color: #fff;
+		padding: 0 14px;
+	}
 	.mobile-icon:where(:not(.showMobileMenu)) + ul {
 		display: none;
 	}
@@ -138,7 +156,8 @@
 		font-size: 13px;
 	}
 	@media only screen and (min-width: 767px) {
-		.mobile-icon {
+		.mobile-icon,
+		.mobile-quote {
 			display: none;
 		}
 		.mobile-icon + ul {

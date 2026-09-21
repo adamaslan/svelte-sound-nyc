@@ -1,13 +1,19 @@
-<svelte:head>
-	<title>Bill Pierce - Sound Mixer</title>
-</svelte:head>
-<h1 class="text-4xl text-center my-8 uppercase">Bill Pierce</h1>
+<script>
+	import Seo from '../../lib/Seo.svelte';
+</script>
+
+<Seo
+	title="Bill Pierce, NYC Sound Mixer | NYC Sound Guy"
+	description="Bill Pierce is a NYC sound mixer, boom op and sound designer for narrative, reality, documentary and commercial shoots. Book through NYC Sound Guy."
+	path="/Billpierce"
+/>
+<h1 class="text-4xl text-center my-8 uppercase">Bill Pierce, NYC Sound Mixer</h1>
 
 <div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">
 	<img
 		class=" h-96 w-96 object-center rounded-md "
-		src="https://res.cloudinary.com/adamaslan/image/upload/v1653499978/nycsoundguy/bill_t8tjce.jpg"
-		alt=""
+		src="https://res.cloudinary.com/adamaslan/image/upload/f_auto,q_auto,w_800/v1653499978/nycsoundguy/bill_t8tjce.jpg"
+		alt="Bill Pierce, NYC sound mixer"
 	/> <br />
 	Bill Pierce is a sound mixer, boom op, <br />and sound designer with years of experience handling
 	audio both on set and in post. Based in New York City, <br /> He is available for jobs in the

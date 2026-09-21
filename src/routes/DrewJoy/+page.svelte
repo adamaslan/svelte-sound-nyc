@@ -1,12 +1,18 @@
-<svelte:head>
-	<title>Drew Joy - Sound Mixer</title>
-</svelte:head>
-<h1 class="text-4xl text-center my-8 uppercase">Drew Joy</h1>
+<script>
+	import Seo from '../../lib/Seo.svelte';
+</script>
+
+<Seo
+	title="Drew Joy, NYC Sound Mixer | NYC Sound Guy"
+	description="Drew Joy is a NYC sound mixer, boom op and sound designer with ADR and Foley experience. Book through NYC Sound Guy."
+	path="/DrewJoy"
+/>
+<h1 class="text-4xl text-center my-8 uppercase">Drew Joy, NYC Sound Mixer</h1>
 
 <div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">
 	<img
-		src="https://res.cloudinary.com/adamaslan/image/upload/v1653501701/nycsoundguy/joy_cecbsd.jpg"
-		alt="adam"
+		src="https://res.cloudinary.com/adamaslan/image/upload/f_auto,q_auto,w_800/v1653501701/nycsoundguy/joy_cecbsd.jpg"
+		alt="Drew Joy, NYC sound mixer"
 	/> <br />
 	Drew Joy is a a sound mixer, boom op, and sound designer with years of experience. He also has experience
 	with ADR, Foley, and other types of post sound.

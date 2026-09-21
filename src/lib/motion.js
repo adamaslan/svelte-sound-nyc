@@ -19,16 +19,47 @@ export function reveal(node, { delay = 0 } = {}) {
 	return { destroy: () => observer.disconnect() };
 }
 
-/** Shifts an element vertically at `speed` x the scroll offset for a parallax feel. */
-export function parallax(node, speed = 0.15) {
+/**
+ * Shifts an element vertically as its parent scrolls through the viewport. The element must be
+ * taller than its overflow-hidden parent (see `.parallax-img`) so the shift never exposes an edge.
+ */
+export function parallax(node, speed = 0.4) {
 	if (prefersReducedMotion()) return {};
 
 	let frame = 0;
 	const update = () => {
 		frame = 0;
 		const rect = node.parentElement.getBoundingClientRect();
+		const spare = (node.offsetHeight - rect.height) / 2;
+		const raw = (window.innerHeight / 2 - (rect.top + rect.height / 2)) * speed;
+		const offset = Math.max(-spare, Math.min(spare, raw));
+		node.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
+	};
+	const onScroll = () => {
+		if (!frame) frame = requestAnimationFrame(update);
+	};
+	update();
+	window.addEventListener('scroll', onScroll, { passive: true });
+	window.addEventListener('resize', onScroll);
+	return {
+		destroy() {
+			window.removeEventListener('scroll', onScroll);
+			window.removeEventListener('resize', onScroll);
+			cancelAnimationFrame(frame);
+		}
+	};
+}
+
+/** Floats an element against the scroll: it rises slower than the page as it crosses the viewport. */
+export function drift(node, speed = 0.12) {
+	if (prefersReducedMotion()) return {};
+
+	let frame = 0;
+	const update = () => {
+		frame = 0;
+		const rect = node.getBoundingClientRect();
 		const offset = (rect.top + rect.height / 2 - window.innerHeight / 2) * speed;
-		node.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0) scale(1.15)`;
+		node.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
 	};
 	const onScroll = () => {
 		if (!frame) frame = requestAnimationFrame(update);
