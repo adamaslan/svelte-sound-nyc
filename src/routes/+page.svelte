@@ -2,8 +2,7 @@
 	// @ts-nocheck
 
 	import Gif from '../lib/gif.svelte';
-	import { fade } from 'svelte/transition';
-	import { reveal, parallax } from '../lib/motion.js';
+	import { reveal, parallax, safeFade } from '../lib/motion.js';
 
 	let showEmail = false;
 	let showNumber = false;
@@ -66,13 +65,13 @@
 			<p>
 				To get our email =>
 				{#if showEmail}
-					<button in:fade={{ delay: 500 }} out:fade on:click={() => (showEmail = !showEmail)}
+					<button in:safeFade={{ delay: 500 }} out:safeFade on:click={() => (showEmail = !showEmail)}
 						><u>THANKS for clicking</u></button
 					>
 				{:else}
 					<button
-						in:fade={{ delay: 500 }}
-						out:fade
+						in:safeFade={{ delay: 500 }}
+						out:safeFade
 						on:click={() => (showEmail = !showEmail)}
 						on:click={() => alert('nycsoundpeople@gmail.com')}><u>Click Here</u></button
 					>
@@ -81,13 +80,13 @@
 			<p class="mt-4">
 				To get our number =>
 				{#if showNumber}
-					<button in:fade={{ delay: 500 }} out:fade on:click={() => (showNumber = !showNumber)}
+					<button in:safeFade={{ delay: 500 }} out:safeFade on:click={() => (showNumber = !showNumber)}
 						><u>THANKS for clicking</u></button
 					>
 				{:else}
 					<button
-						in:fade={{ delay: 500 }}
-						out:fade
+						in:safeFade={{ delay: 500 }}
+						out:safeFade
 						on:click={() => (showNumber = !showNumber)}
 						on:click={() => alert('6176869710')}><u>Click Here</u></button
 					>
