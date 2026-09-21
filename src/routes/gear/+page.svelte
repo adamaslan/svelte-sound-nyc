@@ -1,12 +1,15 @@
 <script>
+	import Seo from '../../lib/Seo.svelte';
 	import { fade } from 'svelte/transition';
 	let foo = false;
 	let foo1 = false;
 </script>
 
-<svelte:head>
-	<title>Gear</title>
-</svelte:head>
+<Seo
+	title="Location Sound Gear | Zaxcom, Sound Devices, Lectrosonics"
+	description="Our NYC sound mixers supply all the gear a shoot needs, from brands like Zaxcom, Sound Devices, Lectrosonics, Sanken, Sennheiser, Ktek and DPA."
+	path="/gear"
+/>
 <h1 class="text-4xl text-center my-8 uppercase">Gear</h1>
 <div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">
 	<p class="text-2xl max-w-2xl">

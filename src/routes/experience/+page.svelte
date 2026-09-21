@@ -1,4 +1,5 @@
 <script>
+	import Seo from '../../lib/Seo.svelte';
 	import { fade } from 'svelte/transition';
 
 	// /**
@@ -9,9 +10,11 @@
 	let foo1 = false;
 </script>
 
-<svelte:head>
-	<title>Experience</title>
-</svelte:head>
+<Seo
+	title="Experience and Clients | NYC Sound Guy"
+	description="Companies and productions our NYC location sound mixers have worked with across film, television, commercials and web content."
+	path="/experience"
+/>
 <h1 class="text-4xl text-center my-8 uppercase">Experience</h1>
 <div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">
 	<p>

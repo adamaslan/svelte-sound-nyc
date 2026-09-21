@@ -4,13 +4,24 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "ProfessionalService",
+				"name": "NYC Sound Guy",
+				"url": "https://nycsoundguy.com",
+				"description": "NYC's only free booking agency for sound professionals: location sound mixers, boom operators and sound utility for film, television, commercials and podcasts.",
+				"areaServed": { "@type": "City", "name": "New York City" },
+				"serviceType": ["Location sound mixing", "Boom operating", "Sound utility"]
+			}
+		</script>
 		%sveltekit.head%
 	</head>
 	<body>
 		<div>%sveltekit.body%</div>
 	</body>
 
-	<div class="div1 shadow-lg rounded-lg p-4">
+	<div id="contact" class="div1 shadow-lg rounded-lg p-4">
 		<script type="text/javascript" src="https://form.jotform.com/jsform/72077025484154"></script>
 	</div>
 </html>

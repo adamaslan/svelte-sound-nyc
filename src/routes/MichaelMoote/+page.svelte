@@ -1,12 +1,18 @@
-<svelte:head>
-	<title>Michael Moote - Sound Mixer</title>
-</svelte:head>
-<h1 class="text-4xl text-center my-8 uppercase">Michael Moote</h1>
+<script>
+	import Seo from '../../lib/Seo.svelte';
+</script>
+
+<Seo
+	title="Michael Moote, NYC Sound Mixer | NYC Sound Guy"
+	description="Michael Moote is a NYC sound mixer, boom op and sound designer for narrative, reality and documentary shoots. Book through NYC Sound Guy."
+	path="/MichaelMoote"
+/>
+<h1 class="text-4xl text-center my-8 uppercase">Michael Moote, NYC Sound Mixer</h1>
 
 <div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">
 	<img
-		src="https://res.cloudinary.com/adamaslan/image/upload/v1653499897/nycsoundguy/moote_skmxsw.jpg"
-		alt="joe"
+		src="https://res.cloudinary.com/adamaslan/image/upload/f_auto,q_auto,w_800/v1653499897/nycsoundguy/moote_skmxsw.jpg"
+		alt="Michael Moote, NYC sound mixer"
 	/> <br />
 	Michael Moote is a a sound mixer, boom op, and sound designer with years of experience handling audio
 	both on set and in post. Based in New York City, He is available for jobs in the tristate area as well

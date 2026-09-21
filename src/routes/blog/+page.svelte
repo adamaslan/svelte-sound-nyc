@@ -1,16 +1,15 @@
 <script>
+	import Seo from '../../lib/Seo.svelte';
 	let foo = false;
 	let foo1 = false;
 	import { fade } from 'svelte/transition';
 </script>
 
-<svelte:head>
-	<title>NYC Sound Blog | Location Sound Articles</title>
-	<meta
-		name="description"
-		content="Articles from working NYC location sound mixers on gear, including Zaxcom and the Nova 2, and life on set."
-	/>
-</svelte:head>
+<Seo
+	title="NYC Sound Blog | Location Sound Articles"
+	description="Articles from working NYC location sound mixers on gear, including Zaxcom and the Nova 2, and life on set."
+	path="/blog"
+/>
 
 <h1 class="text-4xl text-center my-8 uppercase">NYC Sound Blog</h1>
 <div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">

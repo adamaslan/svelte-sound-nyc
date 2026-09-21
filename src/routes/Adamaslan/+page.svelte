@@ -1,12 +1,18 @@
-<svelte:head>
-	<title>Adam Aslan - Sound Mixer</title>
-</svelte:head>
-<h1 class="text-4xl text-center my-8 uppercase">Adam Aslan</h1>
+<script>
+	import Seo from '../../lib/Seo.svelte';
+</script>
+
+<Seo
+	title="Adam Aslan, NYC Sound Mixer | NYC Sound Guy"
+	description="Adam Aslan is a NYC sound mixer, boom op and sound designer for set and post audio. Book through NYC Sound Guy."
+	path="/Adamaslan"
+/>
+<h1 class="text-4xl text-center my-8 uppercase">Adam Aslan, NYC Sound Mixer</h1>
 <div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">
 	<img
 		class=" h-96 w-96 object-center rounded-md "
-		src="https://res.cloudinary.com/adamaslan/image/upload/v1653434875/nycsoundguy/adam_eh3ekw.jpg"
-		alt="adam"
+		src="https://res.cloudinary.com/adamaslan/image/upload/f_auto,q_auto,w_800/v1653434875/nycsoundguy/adam_eh3ekw.jpg"
+		alt="Adam Aslan, NYC sound mixer"
 	/> <br />
 	Adam Aslan is a sound mixer, boom op, and sound designer <br />with years of experience handling
 	audio both on set and in post. Based in New York City, <br /> he is available for jobs in the

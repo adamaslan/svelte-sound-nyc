@@ -1,16 +1,15 @@
 <script>
+	import Seo from '../../../lib/Seo.svelte';
 	let foo = false;
 	let foo1 = false;
 	import { fade } from 'svelte/transition';
 </script>
 
-<svelte:head>
-	<title>Zaxcom Nova 2 | NYC Sound Guy Blog</title>
-	<meta
-		name="description"
-		content="Zaxcom Nova 2 explained by working NYC location sound mixers: a mixer, recorder, ZaxNet remote control and two slot-in wireless receivers in one 3.5 lb device."
-	/>
-</svelte:head>
+<Seo
+	title="Zaxcom Nova 2 | NYC Sound Guy Blog"
+	description="Zaxcom Nova 2 explained by working NYC location sound mixers: a mixer, recorder, ZaxNet remote control and two slot-in wireless receivers in one 3.5 lb device."
+	path="/blog/nova-2"
+/>
 
 <h1 class="text-4xl text-center my-8 uppercase">Zaxcom Nova 2</h1>
 

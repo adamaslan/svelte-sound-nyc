@@ -1,13 +1,16 @@
 <script>
+	import Seo from '../../lib/Seo.svelte';
 	import { fade } from 'svelte/transition';
 	import Gif from '../../lib/gif.svelte';
 	let foo = false;
 	let foo1 = false;
 </script>
 
-<svelte:head>
-	<title>Services</title>
-</svelte:head>
+<Seo
+	title="Location Sound Services | Mixer, Boom Op, Sound Utility"
+	description="Production sound mixing, boom operating and sound utility for film, TV and commercials in NYC, plus live event AV and post sound. Free consultation."
+	path="/services"
+/>
 <h1 class="text-4xl text-center my-8 uppercase">Services</h1>
 <div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">
 	<p>

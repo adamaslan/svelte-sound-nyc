@@ -1,17 +1,16 @@
 <script>
+	import Seo from '../../lib/Seo.svelte';
 	let foo = false;
 	let foo1 = false;
 	import { fade } from 'svelte/transition';
 	import Gif from '../../lib/gif.svelte';
 </script>
 
-<svelte:head>
-	<title>Zaxcom Location Sound Gear | NYC Sound Guy Blog</title>
-	<meta
-		name="description"
-		content="Why Zaxcom mixers, recorders and wireless transmitters are a favorite of NYC location sound mixers, from the Nomad to the Nova 2."
-	/>
-</svelte:head>
+<Seo
+	title="Zaxcom Location Sound Gear | NYC Sound Guy Blog"
+	description="Why Zaxcom mixers, recorders and wireless transmitters are a favorite of NYC location sound mixers, from the Nomad to the Nova 2."
+	path="/Zaxcom"
+/>
 <h1 class="text-4xl text-center my-8 uppercase">Zaxcom</h1>
 
 <div class="flex flex-col text-2xl items-center justify-center px-8 md:px-60">

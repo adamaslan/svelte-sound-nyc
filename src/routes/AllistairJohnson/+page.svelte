@@ -1,13 +1,19 @@
-<svelte:head>
-	<title>Allistair Johnson - Sound Mixer</title>
-</svelte:head>
-<h1 class="text-4xl text-center my-8 uppercase">Allistair Johnson</h1>
+<script>
+	import Seo from '../../lib/Seo.svelte';
+</script>
+
+<Seo
+	title="Allistair Johnson, NYC Sound Mixer | NYC Sound Guy"
+	description="Allistair Johnson is a NYC sound mixer and boom op for narrative, reality and documentary shoots. Book through NYC Sound Guy."
+	path="/AllistairJohnson"
+/>
+<h1 class="text-4xl text-center my-8 uppercase">Allistair Johnson, NYC Sound Mixer</h1>
 
 <div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">
 	<img
 		class=" h-96 w-96 object-center rounded-md "
-		src="https://res.cloudinary.com/adamaslan/image/upload/v1653434876/nycsoundguy/Allistair_zy6ipi.jpg"
-		alt="adam"
+		src="https://res.cloudinary.com/adamaslan/image/upload/f_auto,q_auto,w_800/v1653434876/nycsoundguy/Allistair_zy6ipi.jpg"
+		alt="Allistair Johnson, NYC sound mixer"
 	/> <br />
 
 	Allistair Johnson is a a sound mixer and boom op with years of experience

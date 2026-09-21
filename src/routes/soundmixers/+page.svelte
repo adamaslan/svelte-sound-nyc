@@ -1,13 +1,16 @@
 <script>
+	import Seo from '../../lib/Seo.svelte';
 	import { fade } from 'svelte/transition';
 	import Gif from '../../lib/gif.svelte';
 	let foo = false;
 	let foo1 = false;
 </script>
 
-<svelte:head>
-	<title>Sound Mixers</title>
-</svelte:head>
+<Seo
+	title="NYC Sound Mixers for Hire | Meet the Team"
+	description="Meet the New York City sound mixers, boom operators and sound designers you can book through NYC Sound Guy for film, TV, commercials and documentaries."
+	path="/soundmixers"
+/>
 
 <h1 class="text-4xl text-center my-8 uppercase">Sound Mixers</h1>
 

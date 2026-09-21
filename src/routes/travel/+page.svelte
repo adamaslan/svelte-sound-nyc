@@ -1,13 +1,16 @@
 <script>
+	import Seo from '../../lib/Seo.svelte';
 	let foo = false;
 	let foo1 = false;
 	import { fade } from 'svelte/transition';
 	import Gif from '../../lib/gif.svelte';
 </script>
 
-<svelte:head>
-	<title>Travel</title>
-</svelte:head>
+<Seo
+	title="Travel Sound Mixers for Shoots Anywhere | NYC Sound Guy"
+	description="Seasoned NYC sound mixers with travel gear, ready for shoots anywhere in the world. Book a location sound mixer for your travel shoot."
+	path="/travel"
+/>
 <h1 class="text-4xl text-center my-8 uppercase">Travel</h1>
 
 <div class="p-8 text-2xl max-w-2xl mx-auto flex flex-col justify-center align-middle">
