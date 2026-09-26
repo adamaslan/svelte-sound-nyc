@@ -1,3 +1,5 @@
+import { fade } from 'svelte/transition';
+
 const prefersReducedMotion = () =>
 	typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -74,4 +76,9 @@ export function drift(node, speed = 0.12) {
 			cancelAnimationFrame(frame);
 		}
 	};
+}
+
+/** Svelte `fade` that collapses to an instant swap when the user prefers reduced motion. */
+export function safeFade(node, params = {}) {
+	return fade(node, prefersReducedMotion() ? { ...params, delay: 0, duration: 0 } : params);
 }
